@@ -56,7 +56,7 @@ const certifications = [
 const codingProfiles = [
   {
     name: "LeetCode",
-    stats: "300+ Problems Solved",
+    stats: "500+ Problems Solved",
     url: "https://leetcode.com/u/swathimodala/",
     color: "bg-orange-500",
   },
