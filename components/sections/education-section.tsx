@@ -42,7 +42,7 @@ const education = [
   {
     year: "2020 - 2021",
     title: "Board of Secondary Education",
-    institution: "Sravathi High School",
+    institution: "Sravanthi High School",
     location: "Nalgonda, Telangana",
     status: "Completed",
     field: "Secondary School Education",

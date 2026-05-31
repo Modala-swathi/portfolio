@@ -46,7 +46,7 @@ const certifications = [
   },
 
   {
-    title: "DataScienec",
+    title: "DataScience",
     issuer: "Infosys Springboard",
     date: "2026",
     url: "https://drive.google.com/file/d/1GKIoDNnhaOYV26k2yh9ZyiSTfa6Ug6SA/view?usp=sharing",
