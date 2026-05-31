@@ -18,6 +18,7 @@ import {
   SiDjango,
   SiOpencv,
   SiC,
+  SiNextdotjs,
 } from "react-icons/si"
 
 import { BrainCircuit, Github } from "lucide-react"
@@ -123,6 +124,11 @@ const technologies = [
   {
     name: "Express.js",
     icon: <SiExpress className="text-black dark:text-white" />,
+    level: 80,
+  },
+  {
+    name: "Next.js",
+    icon: <SiNextdotjs className="text-black dark:text-white" />,
     level: 80,
   },
   {
