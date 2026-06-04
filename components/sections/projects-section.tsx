@@ -132,6 +132,7 @@ const projects = [
 
 export function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("all")
+  const [hoveredProjectId, setHoveredProjectId] = useState<number | null>(null)
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -260,6 +261,8 @@ export function ProjectsSection() {
                   animate="visible"
                   exit={{ opacity: 0, scale: 0.9 }}
                   className="group relative overflow-hidden rounded-xl border border-border bg-card"
+                  onMouseEnter={() => setHoveredProjectId(project.id)}
+                  onMouseLeave={() => setHoveredProjectId(null)}
                 >
                   {/* Image */}
                   <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20">
@@ -267,11 +270,15 @@ export function ProjectsSection() {
                       <Folder className="h-16 w-16 text-primary/30" />
                     </div>
 
-                    {/* Hover Overlay */}
+                    {/* Hover Overlay - Always visible on mobile, hover-based on desktop */}
                     <motion.div
                       initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                      className="absolute inset-0 flex items-center justify-center gap-4 bg-background/90 backdrop-blur-sm"
+                      animate={{
+                        opacity:
+                          hoveredProjectId === project.id ? 1 : 0,
+                      }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute inset-0 flex items-center justify-center gap-4 bg-background/90 backdrop-blur-sm md:opacity-0 md:group-hover:opacity-100"
                     >
                       {/* GitHub */}
                       <motion.a
