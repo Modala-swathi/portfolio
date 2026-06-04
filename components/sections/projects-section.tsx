@@ -35,9 +35,8 @@ const projects = [
     image: "/projects/todo.jpg",
     tech: [
       "Java",
-      "Android SDK",
-      "Room Database",
-      "TensorFlow Lite 2.16.1",
+      "AndroidSDK",
+      "RoomDatabase",
       "AndroidX Material",
       "Gradle/Kotlin DSL",
     ],
@@ -365,6 +364,11 @@ export function ProjectsSection() {
                         </span>
                       )}
                     </div>
+
+                    {/* Click Instruction */}
+                    <p className="mt-4 text-xs text-muted-foreground italic">
+                      Click on project to view GitHub and demo link
+                    </p>
                   </div>
                 </motion.div>
               ))}
