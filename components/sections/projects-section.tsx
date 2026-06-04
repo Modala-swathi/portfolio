@@ -366,7 +366,7 @@ export function ProjectsSection() {
                     </div>
 
                     {/* Click Instruction */}
-                    <p className="mt-4 text-xs text-muted-foreground italic">
+                    <p className="mt-4 text-xs text-muted-foreground italic md:hidden">
                       Click on the project title to view the GitHub repository and live demo.
                     </p>
                   </div>
