@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { ExternalLink, Github, Folder, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useIsMobile } from "@/hooks/use-mobile"
 
 const projects = [
   {
@@ -133,7 +132,6 @@ const projects = [
 export function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("all")
   const [hoveredProjectId, setHoveredProjectId] = useState<number | null>(null)
-  const isMobile = useIsMobile()
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -368,11 +366,9 @@ export function ProjectsSection() {
                     </div>
 
                     {/* Click Instruction */}
-                    {isMobile && (
-                      <p className="mt-4 text-xs text-muted-foreground italic">
-                        Click on the project title to view the GitHub repository and live demo.
-                      </p>
-                    )}
+                    <p className="mt-4 text-xs text-muted-foreground italic">
+                      Click on the project title to view the GitHub repository and live demo.
+                    </p>
                   </div>
                 </motion.div>
               ))}
