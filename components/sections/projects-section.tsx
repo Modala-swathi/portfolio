@@ -367,7 +367,7 @@ export function ProjectsSection() {
 
                     {/* Click Instruction */}
                     <p className="mt-4 text-xs text-muted-foreground italic">
-                      Click on project to view GitHub and demo link
+                      Click on the project title to view the GitHub repository and live demo.
                     </p>
                   </div>
                 </motion.div>
